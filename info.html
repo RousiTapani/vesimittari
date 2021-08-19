@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Vesimittari</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />    
+	</head>
+    <body>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            <!--<div class="sb-sidenav-menu-heading">Core</div>-->
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-line"></i></div>
+                                Graafit
+                            </a>
+							<a class="nav-link" href="info.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                                Ohjeet
+                            </a>
+							<a class="nav-link" href="array.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
+                                Taulukot
+                            </a>
+							<a class="nav-link" href="parameters.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-calculator"></i></div>
+                                Parametrit
+                            </a>
+                        </div>
+                    </div>
+					<!--
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+					-->
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+	
+                        <div class="row">
+                            <div class="col-xl-4 col-md-6">
+								<h3 class="component-variation text-muted">Vesi- ja rantakasvillisuus</h3>
+									<div class="accordion" id="accordionVesiJaRanta">
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingVesiJaRanta1">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseVesiJaRanta1" aria-expanded="false" aria-controls="collapseVesiJaRanta11">
+													<h6>Saraikon laajuus</h6>
+												</button>
+											</h2>
+											<div id="collapseVesiJaRanta1" class="accordion-collapse collapse" aria-labelledby="headingVesiJaRanta1" data-bs-parent="#accordionVesiJaRanta">
+												<div class="accordion-body">
+													<b>Laskentakaava</b><br> 
+													HW_(W_JLP – 2vk –> W_JLP + 30 pv) –W_50(OWP)<br>
+													<b>Selitys</b><br>
+													Kevättulvan aikaisen ylimmän vedenkorkeuden ja avovesikauden mediaanivedenkorkeuden erotus (m)<br>
+													<b>Vaikutuksen kohde</b><br> 
+													Umpeenkasvu, ylipäänsä luontainen vedenkorkeuden vaihtelu Suomen ilmastossa. Saraikon laajuus.<br>
+													<b>Soveltuvuus eri tyyppisille järville</b><br>Kaikki, tosin riippuu erittäin merkittävästi valuma-alueen järvisyydestä. Ei saisi käyttää mitenkään sokkona. Sopii kuitenkin saman järven eri tilanteiden vertailuun
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingVesiJaRanta2">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseVesiJaRanta2" aria-expanded="false" aria-controls="collapseVesiJaRanta2">
+													<h6>Tulvan suuruus</h6>
+												</button>
+											</h2>
+											<div id="collapseVesiJaRanta2" class="accordion-collapse collapse" aria-labelledby="headingVesiJaRanta1" data-bs-parent="#accordionVesiJaRanta">
+												<div class="accordion-body">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingVesiJaRanta3">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseVesiJaRanta3" aria-expanded="false" aria-controls="collapseVesiJaRanta3">
+													<h6>Saraikko</h6>
+												</button>
+											</h2>
+											<div id="collapseVesiJaRanta3" class="accordion-collapse collapse" aria-labelledby="headingVesiJaRanta3" data-bs-parent="#accordionVesiJaRanta">
+												<div class="accordion-body">
+													<b>Lorem ipsum dolor sit amet,</b> <br> consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div>
+									</div>
+							</div>
+	
+                            <div class="col-xl-4 col-md-6">
+
+								<h3 class="component-variation text-muted">Linnusto, kala ja pieneliöstö</h3>
+									<div class="accordion" id="accordionElaimet">
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingElaimet1">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseElaimet1" aria-expanded="false" aria-controls="collapseElaimet11">
+													<h6>Kuikka, harmaalokki</h6>
+												</button>
+											</h2>
+											<div id="collapseElaimet1" class="accordion-collapse collapse" aria-labelledby="headingElaimet1" data-bs-parent="#accordionElaimet">
+												<div class="accordion-body">
+													<b>Laskentakaava</b><br> 
+													HW_(W_JLP – 2vk –> W_JLP + 30 pv) –W_50(OWP)<br>
+													<b>Selitys</b><br>
+													Kevättulvan aikaisen ylimmän vedenkorkeuden ja avovesikauden mediaanivedenkorkeuden erotus (m)<br>
+													<b>Vaikutuksen kohde</b><br> 
+													Umpeenkasvu, ylipäänsä luontainen vedenkorkeuden vaihtelu Suomen ilmastossa. Saraikon laajuus.<br>
+													<b>Soveltuvuus eri tyyppisille järville</b><br>Kaikki, tosin riippuu erittäin merkittävästi valuma-alueen järvisyydestä. Ei saisi käyttää mitenkään sokkona. Sopii kuitenkin saman järven eri tilanteiden vertailuun
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingElaimet2">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseElaimet2" aria-expanded="false" aria-controls="collapseElaimet2">
+													<h6>Kalaston pohjaeläinravinnon määrä</h6>
+												</button>
+											</h2>
+											<div id="collapseElaimet2" class="accordion-collapse collapse" aria-labelledby="headingElaimet1" data-bs-parent="#accordionElaimet">
+												<div class="accordion-body">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingElaimet3">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseElaimet3" aria-expanded="false" aria-controls="collapseElaimet3">
+													<h6>Järvikutuisten mädin säilyminen</h6>
+												</button>
+											</h2>
+											<div id="collapseElaimet3" class="accordion-collapse collapse" aria-labelledby="headingElaimet3" data-bs-parent="#accordionElaimet">
+												<div class="accordion-body">
+													<b>Lorem ipsum dolor sit amet,</b> <br> consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingElaimet4">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseElaimet4" aria-expanded="false" aria-controls="collapseElaimet4">
+													<h6>Hauen lisääntymisen onnistuminen</h6>
+												</button>
+											</h2>
+											<div id="collapseElaimet4" class="accordion-collapse collapse" aria-labelledby="headingElaimet4" data-bs-parent="#accordionElaimet">
+												<div class="accordion-body">
+													<b>Lorem ipsum dolor sit amet,</b> <br> consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div>
+									</div>
+                                
+                            </div>
+                            <div class="col-xl-4 col-md-6">
+								
+								
+								
+								<h3 class="component-variation text-muted">Virkistyskäyttö</h3>
+									<div class="accordion" id="accordionVirkistys">
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingVirkistys1">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseVirkistys1" aria-expanded="false" aria-controls="collapseVirkistys11">
+													<h6>Vesistön virkistyskäyttö ja rantojen käyttö, maisema</h6>
+												</button>
+											</h2>
+											<div id="collapseVirkistys1" class="accordion-collapse collapse" aria-labelledby="headingVirkistys1" data-bs-parent="#accordionVirkistys">
+												<div class="accordion-body">
+													<b>Laskentakaava</b><br> 
+													HW_(W_JLP – 2vk –> W_JLP + 30 pv) –W_50(OWP)<br>
+													<b>Selitys</b><br>
+													Kevättulvan aikaisen ylimmän vedenkorkeuden ja avovesikauden mediaanivedenkorkeuden erotus (m)<br>
+													<b>Vaikutuksen kohde</b><br> 
+													Umpeenkasvu, ylipäänsä luontainen vedenkorkeuden vaihtelu Suomen ilmastossa. Saraikon laajuus.<br>
+													<b>Soveltuvuus eri tyyppisille järville</b><br>Kaikki, tosin riippuu erittäin merkittävästi valuma-alueen järvisyydestä. Ei saisi käyttää mitenkään sokkona. Sopii kuitenkin saman järven eri tilanteiden vertailuun
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingVirkistys2">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseVirkistys2" aria-expanded="false" aria-controls="collapseVirkistys2">
+													<h6>Talvikalastus, talous- ja saunavedenotto järvestä, liikkuminen jäällä</h6>
+												</button>
+											</h2>
+											<div id="collapseVirkistys2" class="accordion-collapse collapse" aria-labelledby="headingVirkistys1" data-bs-parent="#accordionVirkistys">
+												<div class="accordion-body">
+													Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingVirkistys3">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseVirkistys3" aria-expanded="false" aria-controls="collapseVirkistys3">
+													<h6>Rantojen ja laiturien käyttö, veneily, vesimaisema</h6>
+												</button>
+											</h2>
+											<div id="collapseVirkistys3" class="accordion-collapse collapse" aria-labelledby="headingVirkistys3" data-bs-parent="#accordionVirkistys">
+												<div class="accordion-body">
+													<b>Lorem ipsum dolor sit amet,</b> <br> consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div>
+										<div class="accordion-item">
+											<h2 class="accordion-header" id="headingVirkistys4">
+												<button type="button" class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#collapseVirkistys4" aria-expanded="false" aria-controls="collapseVirkistys4">
+													<h6>Rantojen eroosio, rantavyörymät, kunnostustarve</h6>
+												</button>
+											</h2>
+											<div id="collapseVirkistys4" class="accordion-collapse collapse" aria-labelledby="headingVirkistys4" data-bs-parent="#accordionVirkistys">
+												<div class="accordion-body">
+													<b>Lorem ipsum dolor sit amet,</b> <br> consectetur adipiscing elit. Donec mattis posuere consequat. Nulla fermentum sodales augue, vitae ornare eros ornare quis. Donec lectus est, congue eu risus quis, tempus sagittis nunc. Donec blandit accumsan augue eu bibendum. Suspendisse pretium facilisis sapien, ac dignissim leo. Phasellus fermentum nulla eget quam congue sagittis. Donec volutpat vel sapien sit amet lobortis. Aenean non vulputate nunc, eu luctus libero.
+												</div>
+											</div>
+										</div
+									</div>
+ 
+                            </div>
+                        </div>
+										
+        </div>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="node_modules/chart.js/dist/chart.min.js"></script>
+        <!--
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        -->
+        <script src="js/limits.js"></script>
+        <script src="js/graphs.js"></script>
+        <!--Joku side-bar juttu-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>

@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Vesimittari</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+		<link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+ 
+	</head>
+    <body><!-- class="sb-nav-fixed">-->
+		<!--
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div>
+            </form>
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+		-->
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu mt-4">
+                        <div class="nav">
+                            <!--<div class="sb-sidenav-menu-heading">Core</div>-->
+                            <a class="nav-link" href="index.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-chart-line"></i></div>
+                                Graafit  
+                            </a>
+							<a class="nav-link" href="info.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-info-circle"></i></div>
+                                Ohjeet
+                            </a>
+							<a class="nav-link" href="array.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-list"></i></div>
+                                Taulukot
+                            </a>
+							<a class="nav-link" href="parameters.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-calculator"></i></div>
+                                Parametrit
+                            </a>
+                        </div>
+                    </div>
+					<!--
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Start Bootstrap
+                    </div>
+					-->
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Dashboard</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">Dashboard</li>
+                        </ol>
+						<!--
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-warning text-white mb-4">
+                                    <div class="card-body">Warning Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-success text-white mb-4">
+                                    <div class="card-body">Success Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Danger Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+						-->
+				
+
+				<table class="table table-hover table-bordered table-sm align-middle">
+					<thead class="table-secondary">
+						<tr>
+							<th scope="row"></th>
+							<td colspan="8" style="text-align:center"><h3>Vesi- ja rantakasvillisuus</h3></td>
+							<td colspan="4" style="text-align:center"><h3>Linnusto, kala ja pieneliöstö</h3></td>
+							<td colspan="4" style="text-align:center"><h3>Virkistyskäyttö</h3></td>
+						</tr>
+						<tr>
+							<th scope="col" style="text-align:center">Vuosi</th>
+							<th scope="col" style="text-align:center">M1</th>
+							<th scope="col" style="text-align:center">M2</th>
+							<th scope="col" style="text-align:center">M5</th>
+							<th scope="col" style="text-align:center">M6</th>
+							<th scope="col" style="text-align:center">M7</th>
+							<th scope="col" style="text-align:center">M8</th>
+							<th scope="col" style="text-align:center">M9</th>
+							<th scope="col" style="text-align:center">M11</th>
+							<th scope="col" style="text-align:center">M13</th>
+							<th scope="col" style="text-align:center">M14</th>
+							<th scope="col" style="text-align:center">M17</th>
+							<th scope="col" style="text-align:center">M19</th>
+							<th scope="col" style="text-align:center">M22</th>
+							<th scope="col" style="text-align:center">M23</th>
+							<th scope="col" style="text-align:center">M24</th>
+						</tr>
+					</thead>
+					<tbody>				
+
+				<tr>
+					<th scope="row" style="text-align:center">2007</th>
+					<td style="text-align:center;background-color:#ebfcdc;">0.21</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.16</td>
+					<td style="text-align:center;background-color:#fffd91;">0.22</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.84</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.91</td>
+					<td style="text-align:center;background-color:#c6fa96;">-3.87</td>
+					<td style="text-align:center;background-color:#c6fa96;">15.63</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.46</td>
+					<td style="text-align:center;background-color:#ffb3a1;">64.74</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.23</td>
+					<td style="text-align:center;background-color:#ffb3a1;">-0.55</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.2</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">-0.03</td>
+					<td style="text-align:center;background-color:#fffd91;">31</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2008</th>
+					<td style="text-align:center;background-color:#ebfcdc;">0.23</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.18</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.08</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.98</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.97</td>
+					<td style="text-align:center;background-color:#c6fa96;">4.22</td>
+					<td style="text-align:center;background-color:#c6fa96;">14.25</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.05</td>
+					<td style="text-align:center;background-color:#ffb3a1;">65.26</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.24</td>
+					<td style="text-align:center;background-color:#ffb3a1;">-0.02</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.17</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0</td>
+					<td style="text-align:center;background-color:#fffd91;">30</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2009</th>
+					<td style="text-align:center;background-color:#ffb3a1;">-0.14</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.6</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.43</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.71</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.96</td>
+					<td style="text-align:center;background-color:#c6fa96;">-12.72</td>
+					<td style="text-align:center;background-color:#c6fa96;">13.33</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.07</td>
+					<td style="text-align:center;background-color:#ffb3a1;">76.32</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.45</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.38</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.08</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.17</td>
+					<td style="text-align:center;background-color:#ffe6e0;">21</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2010</th>
+					<td style="text-align:center;background-color:#ebfcdc;">0.28</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.31</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.14</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.95</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.96</td>
+					<td style="text-align:center;background-color:#c6fa96;">-4.71</td>
+					<td style="text-align:center;background-color:#ffb3a1;">13141.21</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.07</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.02</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.22</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">-0.03</td>
+					<td style="text-align:center;background-color:#ffe6e0;">19</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2011</th>
+					<td style="text-align:center;background-color:#fffd91;">0.18</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.21</td>
+					<td style="text-align:center;background-color:#fffd91;">0.2</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.94</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.94</td>
+					<td style="text-align:center;background-color:#c6fa96;">-2.87</td>
+					<td style="text-align:center;background-color:#c6fa96;">15.05</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.05</td>
+					<td style="text-align:center;background-color:#ffb3a1;">66.32</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.26</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.04</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.08</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">-0.09</td>
+					<td style="text-align:center;background-color:#ffe6e0;">22</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2012</th>
+					<td style="text-align:center;background-color:#c6fa96;">0.43</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.34</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.11</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.97</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.97</td>
+					<td style="text-align:center;background-color:#c6fa96;">2.24</td>
+					<td style="text-align:center;background-color:#c6fa96;">16.22</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.05</td>
+					<td style="text-align:center;background-color:#ffb3a1;">67.44</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.28</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.01</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.11</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#fffd91;">0.06</td>
+					<td style="text-align:center;background-color:#ffe6e0;">20</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2013</th>
+					<td style="text-align:center;background-color:#ffb3a1;">-99</td>
+					<td style="text-align:center;background-color:#ffb3a1;">235.31</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.06</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.98</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.99</td>
+					<td style="text-align:center;background-color:#c6fa96;">-3.63</td>
+					<td style="text-align:center;background-color:#c6fa96;">17.5</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.05</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffb3a1;">-0.01</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.09</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#fffd91;">0.02</td>
+					<td style="text-align:center;background-color:#ffe6e0;">20</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2014</th>
+					<td style="text-align:center;background-color:#fffd91;">0.11</td>
+					<td style="text-align:center;background-color:#fffd91;">-0.17</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.45</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.73</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.93</td>
+					<td style="text-align:center;background-color:#c6fa96;">-23.33</td>
+					<td style="text-align:center;background-color:#c6fa96;">-1.66</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.32</td>
+					<td style="text-align:center;background-color:#c6fa96;">3.68</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.07</td>
+					<td style="text-align:center;background-color:#ffb3a1;">-0.12</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.11</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#fffd91;">0.09</td>
+					<td style="text-align:center;background-color:#fffd91;">46</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2015</th>
+					<td style="text-align:center;background-color:#ffe6e0;">0.04</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.02</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.08</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.95</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.99</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.86</td>
+					<td style="text-align:center;background-color:#c6fa96;">14.59</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.24</td>
+					<td style="text-align:center;background-color:#ffb3a1;">69.47</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.32</td>
+					<td style="text-align:center;background-color:#ffb3a1;">-0.22</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.11</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0</td>
+					<td style="text-align:center;background-color:#fffd91;">42</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2016</th>
+					<td style="text-align:center;background-color:#fffd91;">0.14</td>
+					<td style="text-align:center;background-color:#ffb3a1;">0.03</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.1</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.98</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.98</td>
+					<td style="text-align:center;background-color:#c6fa96;">-4.72</td>
+					<td style="text-align:center;background-color:#c6fa96;">12.64</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.17</td>
+					<td style="text-align:center;background-color:#ffb3a1;">57.89</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.1</td>
+					<td style="text-align:center;background-color:#ffb3a1;">-0.02</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.1</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">-0.03</td>
+					<td style="text-align:center;background-color:#fffd91;">36</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2017</th>
+					<td style="text-align:center;background-color:#fffd91;">0.13</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0</td>
+					<td style="text-align:center;background-color:#ffe6e0;">0.17</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.96</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.96</td>
+					<td style="text-align:center;background-color:#c6fa96;">-11.86</td>
+					<td style="text-align:center;background-color:#c6fa96;">13.89</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.02</td>
+					<td style="text-align:center;background-color:#ffb3a1;">65.26</td>
+					<td style="text-align:center;background-color:#ffe6e0;">1.24</td>
+					<td style="text-align:center;background-color:#fffd91;">0.11</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.12</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#ffe6e0;">-0.06</td>
+					<td style="text-align:center;background-color:#ffe6e0;">16</td>
+				</tr>
+				<tr>
+					<th scope="row" style="text-align:center">2018</th>
+					<td style="text-align:center;background-color:#ebfcdc;">0.35</td>
+					<td style="text-align:center;background-color:#ebfcdc;">-0.42</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.44</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.72</td>
+					<td style="text-align:center;background-color:#ebfcdc;">0.91</td>
+					<td style="text-align:center;background-color:#c6fa96;">-11.81</td>
+					<td style="text-align:center;background-color:#c6fa96;">12.74</td>
+					<td style="text-align:center;background-color:#c6fa96;">-0.17</td>
+					<td style="text-align:center;background-color:#ffe6e0;">45.26</td>
+					<td style="text-align:center;background-color:#fffd91;">0.86</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.31</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.1</td>
+					<td style="text-align:center;background-color:#c6fa96;">-99</td>
+					<td style="text-align:center;background-color:#c6fa96;">0.53</td>
+					<td style="text-align:center;background-color:#ffe6e0;">28</td>
+				</tr>
+					
+					
+				  </tbody>
+</table>
+
+						
+
+                    </div>
+                </main>
+
+            </div>
+        </div>
+        <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="node_modules/chart.js/dist/chart.min.js"></script>
+        <!--
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        -->
+        <script src="js/limits.js"></script>
+        <script src="js/graphs.js"></script>
+        <!--Joku side-bar juttu-->
+        <script src="js/scripts.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
